@@ -11,6 +11,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.util.List;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -19,36 +20,34 @@ import java.util.ArrayList;
 @Table(name="saca")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 
-public class SacaBean {
+public class SacaBean implements Serializable {
 
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column
-	private long idSaca;
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	
+	
 	@Column
 	private String fechaPrestamo;
 
 	@Column
 	private String fechaDevolucion;
 
+	@Id
 	@ManyToOne
 	private UsuarioBean usuario;
 	
+	@Id
 	@ManyToOne
 	private EjemplarBean ejemplar;
 
 	
 	
-	
-	public long getIdSaca() {
-		return idSaca;
-	}
 
-	public void setIdSaca(long idSaca) {
-		this.idSaca = idSaca;
-	}
 
 	public String getFechaPrestamo() {
 		return fechaPrestamo;
