@@ -23,19 +23,18 @@ import java.util.ArrayList;
 public class SacaBean implements Serializable {
 
 	
-
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
-	
+	@Id
 	@Column
 	private String fechaPrestamo;
 
 	@Column
 	private String fechaDevolucion;
+
 
 	@Id
 	@ManyToOne
@@ -47,6 +46,7 @@ public class SacaBean implements Serializable {
 
 	
 	
+
 
 
 	public String getFechaPrestamo() {

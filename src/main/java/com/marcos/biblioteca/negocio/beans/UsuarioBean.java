@@ -44,7 +44,7 @@ public class UsuarioBean {
 	
 		
 	
-	public void addUsuario(SacaBean extraccion) {
+	public void addExtraccion(SacaBean extraccion) {
 		
 		if(!extracciones.contains(extraccion)) {
 			

@@ -2,7 +2,6 @@ package com.marcos.bibloteca.negocio;
 
 import javax.persistence.EntityManager;
 
-import com.marcos.biblioteca.negocio.beans.AutorBean;
 import com.marcos.biblioteca.negocio.beans.LibroBean;
 import com.marcos.bibloteca.util.ConnectionEntityManagerFactory;
 

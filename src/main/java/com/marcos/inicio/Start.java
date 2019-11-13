@@ -16,7 +16,7 @@ public class Start {
 	public static void main(String[] args) {
 
 
-		
+		/*
 		
 		AutorBean kenFollet = new AutorBean();
 		kenFollet.setNombre("Ken Follet");
@@ -62,7 +62,7 @@ public class Start {
 		createLibro.create(harryPotterII);
 		createLibro.create(pilares);	
 		
-			
+		*/	
 		
 		
 		
@@ -86,6 +86,14 @@ public class Start {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		EjemplarBean ejemplarHarryPotterI = new EjemplarBean();
 		ejemplarHarryPotterI.setLocalizacion("5D6H");
 		
@@ -99,23 +107,43 @@ public class Start {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		SacaBean extraccion1 = new SacaBean();
-		extraccion1.setEjemplar(ejemplarHarryPotterI);
-		extraccion1.setUsuario(marcos);
 		extraccion1.setFechaPrestamo("enero");
 		extraccion1.setFechaDevolucion("febrero");
 		
 		SacaBean extraccion2 = new SacaBean();
-		extraccion2.setEjemplar(ejemplarHarryPotterI);
-		extraccion2.setUsuario(maria);
-		extraccion2.setFechaPrestamo("enero");
+		extraccion2.setFechaPrestamo("febrero");
 		extraccion2.setFechaDevolucion("febrero");
 
 		SacaBean extraccion3 = new SacaBean();
-		extraccion3.setEjemplar(ejemplarHarryPotterII);
-		extraccion3.setUsuario(marcos);
-		extraccion3.setFechaPrestamo("enero");
-		extraccion3.setFechaDevolucion("febrero");
+		extraccion3.setFechaPrestamo("marzo");
+		extraccion3.setFechaDevolucion("abril");
+		
+		
+		// enlazo la extracción 1
+		marcos.addExtraccion(extraccion1);
+		ejemplarHarryPotterI.addExtraccion(extraccion1);
+		
+		marcos.addExtraccion(extraccion2);
+		ejemplarHarryPotterII.addExtraccion(extraccion2);
+		
+		maria.addExtraccion(extraccion3);
+		ejemplarHarryPotterI.addExtraccion(extraccion3);
+		
+		
+		
+		
+		
+		
+		
 		
 		CreateSaca createSaca = new CreateSaca();
 		createSaca.create(extraccion1);
